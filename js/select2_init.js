@@ -12,7 +12,7 @@
         elements.forEach((el) => {
           $(el).select2({
             ajax: {
-              url: 'http://takemc.docksal/get-authors', //
+              url: 'http://takemc.docksal/get-tags', //
               dataType: 'json',
               delay: 250,
               data: function (params) {
