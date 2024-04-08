@@ -10,8 +10,8 @@
 
 Для корректной работы модуля требуется установка следующих компонентов:
 
-- Модуль Select2
-- Библиотека Select2
+- [Модуль Select2](https://www.drupal.org/project/select2)
+- [Библиотека Select2](https://github.com/select2/select2)
 
 ## Функциональность
 
