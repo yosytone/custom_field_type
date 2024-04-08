@@ -27,6 +27,8 @@ class CustomFieldWidget extends OptionsSelectWidget {
     $node = \Drupal::routeMatch()->getParameter('node');
     $field_name = $this->fieldDefinition->getName();
 
+    $element['#attached']['library'][] = 'custom_field_type/custom_field_widget';
+
     $loaded_value = [];
     if ($node instanceof \Drupal\node\NodeInterface && !$node->get($field_name)->isEmpty()) {
       $field_value = $node->get($field_name)->getValue();

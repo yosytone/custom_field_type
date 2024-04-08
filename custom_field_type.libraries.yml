@@ -2,6 +2,9 @@ custom_field_widget:
   version: 1.x
   js:
     js/select2_init.js: {}
+  css:
+    theme:
+      css/custom_field_widget.css: {}
   dependencies:
     - core/drupal
     - core/drupalSettings
