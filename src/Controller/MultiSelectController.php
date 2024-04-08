@@ -69,9 +69,6 @@ class MultiSelectController extends ControllerBase {
     // Get the 'page' parameter from the request or set default value to 1.
     $page = $request->query->get('page') ?: 1;
 
-    // Log the search query.
-    \Drupal::logger('custom_Request2')->notice($q);
-
     // Load taxonomy terms matching the search query.
     $term_storage = $this->entityTypeManager->getStorage('taxonomy_term');
     $query = $term_storage->getQuery()
@@ -83,7 +80,7 @@ class MultiSelectController extends ControllerBase {
     $total_terms = $query->execute();
 
     // Define pagination limit and calculate offset.
-    $limit = 8;
+    $limit = 20;
     $offset = ($page - 1) * $limit;
 
     // Load taxonomy terms with pagination.
